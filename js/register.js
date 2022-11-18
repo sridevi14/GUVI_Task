@@ -26,10 +26,8 @@ $(document).ready(function () {
         }
         if (res == 1) {
           $("#register_output").html(" Already Exist");
-        } 
-        
+        }
       },
-      
     });
     //}
   });
