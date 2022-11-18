@@ -16,6 +16,10 @@ class ComposerStaticInit7d65f076b74fd6acc4afa872136e2208
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
         ),
+        'P' => 
+        array (
+            'Predis\\' => 7,
+        ),
         'M' => 
         array (
             'MongoDB\\' => 8,
@@ -30,6 +34,10 @@ class ComposerStaticInit7d65f076b74fd6acc4afa872136e2208
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
+        ),
+        'Predis\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/predis/predis/src',
         ),
         'MongoDB\\' => 
         array (

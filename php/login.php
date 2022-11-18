@@ -22,12 +22,16 @@ if ($stmt->execute()) {
 
 if ($num_rows > 0) {
     //Connecting to Redis
-    $redis = new Redis();
-    $redis->connect(
-        "redis-11083.c305.ap-south-1-1.ec2.cloud.redislabs.com",
-        11083
-    );
-    $redis->auth("gyOkIyrxtraXfB3F5tvU7G3ODZuYRzMv");
+    // require "predis/autoload.php";
+
+    require_once dirname(__DIR__, 1) . "./vendor/predis/predis/autoload.php";
+    Predis\Autoloader::register();
+    $redis = new Predis\Client([
+        "scheme" => "tcp",
+        "host" => "redis-11083.c305.ap-south-1-1.ec2.cloud.redislabs.com",
+        "port" => 11083,
+        "password" => "gyOkIyrxtraXfB3F5tvU7G3ODZuYRzMv",
+    ]);
 
     if (!$redis->ping()) {
         echo "Connection failed";
@@ -36,7 +40,7 @@ if ($num_rows > 0) {
     $redis->set($session_id, $email);
 
     echo $session_id;
-    $redis->close();
+    // $redis->close();
 } else {
     echo 5;
 }

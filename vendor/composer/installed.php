@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '1b00b44a88b87519e6634db1b379a44b6ed785ed',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '1b00b44a88b87519e6634db1b379a44b6ed785ed',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -34,6 +34,15 @@
             'reference' => '4afe9254e87252879bfbb625858e78fbe072daa0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../mongodb/mongodb',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'predis/predis' => array(
+            'pretty_version' => 'v2.0.3',
+            'version' => '2.0.3.0',
+            'reference' => 'ff59f745815150c65ed388f7d64e7660fe961771',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../predis/predis',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
