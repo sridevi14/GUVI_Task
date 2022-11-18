@@ -12,7 +12,7 @@ if (isset($_POST["name"])) {
     $val = $_GET["session_Id"];
     //echo $val;
     // require "predis/autoload.php";
-    require_once dirname(__DIR__, 1) . "./vendor/predis/predis/autoload.php";
+    require_once dirname(__DIR__, 1) . "/vendor/predis/predis/autoload.php";
     Predis\Autoloader::register();
     $redis = new Predis\Client([
         "scheme" => "tcp",
@@ -41,7 +41,7 @@ if (isset($_POST["name"])) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
-    require_once dirname(__DIR__, 1) . "./vendor/predis/predis/autoload.php";
+    require_once dirname(__DIR__, 1) . "/vendor/predis/predis/autoload.php";
     Predis\Autoloader::register();
     $redis = new Predis\Client([
         "scheme" => "tcp",
@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     $redis->delete($val);
     echo "i am deleted";
 } elseif ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["name"])) {
-    require_once dirname(__DIR__, 1) . "./vendor/predis/predis/autoload.php";
+    require_once dirname(__DIR__, 1) . "/vendor/predis/predis/autoload.php";
     Predis\Autoloader::register();
     $redis = new Predis\Client([
         "scheme" => "tcp",

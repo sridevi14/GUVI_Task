@@ -24,7 +24,7 @@ if ($num_rows > 0) {
     //Connecting to Redis
     // require "predis/autoload.php";
 
-    require_once dirname(__DIR__, 1) . "./vendor/predis/predis/autoload.php";
+    require_once dirname(__DIR__, 1) . "/vendor/predis/predis/autoload.php";
     Predis\Autoloader::register();
     $redis = new Predis\Client([
         "scheme" => "tcp",
