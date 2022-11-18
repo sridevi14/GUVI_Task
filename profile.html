@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/profile.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center">Profile</h1>
+         <h3 id="profile" class="text-info"></h3>
+          <br /><br />
+          <div id="register_output" class="text-primary"></div>
+
+          
+          <form action="" method="post" autocomplete="off" id="myForm">
+            <div class="input-group">
+              <label for="name">Name:<span class="text-danger">*</span></label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                placeholder="name"
+                class="form-control"
+              />
+            </div>
+            <br />
+
+            <div class="input-group">
+              <label for="email"
+                >Email:<span class="text-danger">*</span></label
+              >
+              <input
+                type="email"
+                name="email"
+                required
+                id="email"
+                placeholder="email"
+                class="form-control"
+                disabled
+              />
+            </div>
+
+            <br />
+
+            <div class="input-group">
+              <label for="email">DOB:<span class="text-danger">*</span></label>
+              <input
+                type="date"
+                name="dob"
+                required
+                id="dob"
+                placeholder="dob"
+                class="form-control"
+              />
+            </div>
+
+            <br />
+            <div class="input-group">
+              <label for="address"
+                >Address:<span class="text-danger">*</span></label
+              >
+              <textarea
+                id="address"
+                name="address"
+                required
+                rows="4"
+                cols="50"
+                placeholder="address"
+                class="form-control"
+              >
+              </textarea>
+            </div>
+            <br />
+            <button
+              type="submit"
+              class="btn btn-success"
+              name="button"
+              id="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+      <br />
+      <div class="d-flex flex-row-reverse">
+        <button
+          type="button"
+          class="btn btn-danger"
+          name="button"
+          id="logout"
+          onclick="logout();"
+        >
+          log out
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
