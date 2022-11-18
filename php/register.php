@@ -38,7 +38,7 @@
 
   // require_once __DIR__ .'./vendor/autoload.php';
   // // connect to mongodb
-  require_once dirname(__DIR__, 1) . "./vendor/autoload.php";
+  require_once dirname(__DIR__, 1) . "/vendor/autoload.php";
   $conn_mongoDB = new MongoDB\Client(
       "mongodb+srv://sridevi:manju@guvi.yncne6h.mongodb.net/?retryWrites=true&w=majority"
   );

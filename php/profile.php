@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST["name"])) {
-    require_once dirname(__DIR__, 1) . "./vendor/autoload.php";
+    require_once dirname(__DIR__, 1) . "/vendor/autoload.php";
     // connect to mongodb
     $conn_mongoDB = new MongoDB\Client(
         "mongodb+srv://sridevi:manju@guvi.yncne6h.mongodb.net/?retryWrites=true&w=majority"
@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     $ses_id = $_POST["myData"];
     $sree = $redis->get($ses_id);
 
-    require_once dirname(__DIR__, 1) . "./vendor/autoload.php";
+    require_once dirname(__DIR__, 1) . "/vendor/autoload.php";
     // connect to mongodb
     $conn_mongoDB = new MongoDB\Client(
         "mongodb+srv://sridevi:manju@guvi.yncne6h.mongodb.net/?retryWrites=true&w=majority"
